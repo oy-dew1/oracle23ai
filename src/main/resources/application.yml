@@ -1,15 +1,12 @@
 spring:
   r2dbc:
-    url: r2dbc:oracle:tcps://mydb.adb.ap-seoul-1.oraclecloud.com:1522/mydb_medium.adb.oraclecloud.com
+    url: r2dbc:oracle:thin:@tcps://adb.ap-seoul-1.oraclecloud.com:1522/xy7abcde_medium.adb.oraclecloud.com?TNS_ADMIN=/Users/oliveyoung/Wallet_myadb
     username: ZLEEDONGJU
     password: Wakemake123!
     pool:
       enabled: true
-
-  sql:
-    init:
-      mode: never
-
+      max-size: 20
+      validation-query: SELECT 1 FROM DUAL
 logging:
   level:
     io.r2dbc: DEBUG
