@@ -1,0 +1,15 @@
+spring:
+  r2dbc:
+    url: r2dbc:oracle:tcps://mydb.adb.ap-seoul-1.oraclecloud.com:1522/mydb_medium.adb.oraclecloud.com
+    username: ZLEEDONGJU
+    password: Wakemake123!
+    pool:
+      enabled: true
+
+  sql:
+    init:
+      mode: never
+
+logging:
+  level:
+    io.r2dbc: DEBUG
